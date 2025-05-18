@@ -1,0 +1,26 @@
+import mlflow # type: ignore
+
+mlflow.set_tracking_uri('sqlite:///mlflow.db')
+mlflow.set_experiment('nyc-taxi-experiment')
+
+with mlflow.start_run():
+    alpha = 0.1
+    randstate = 42
+    lr = Lasso(alpha, random_state=randstate)
+    lr.fit(X_train, y_train)
+    y_pred = lr.predict(X_val)
+    rmse = np.sqrt(mean_squared_error(y_val, y_pred))
+
+# set tags
+    mlflow.set_tag('developer', 'waseem')
+# set params
+    mlflow.log_param('train-data', 'https://d37ci6vzurychx.cloudfront.net/trip-data/green_tripdata_2021-01.parquet')
+    mlflow.log_param('valid-data', 'https://d37ci6vzurychx.cloudfront.net/trip-data/green_tripdata_2021-02.parquet')
+    mlflow.log_param('random_state', randstate)
+    mlflow.log_param('alpha', alpha)
+# set metric
+    mlflow.log_metric('RMSE', rmse)
+
+########################################################################################################
+# code to create/view the db for experiment tracking and to run the ui
+>> mlflow ui --backend-store-uri sqlite:///mlflow.db
