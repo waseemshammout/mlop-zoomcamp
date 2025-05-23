@@ -22,5 +22,45 @@ with mlflow.start_run():
     mlflow.log_metric('RMSE', rmse)
 
 ########################################################################################################
-# code to create/view the db for experiment tracking and to run the ui
+# code to create/set the db for experiment tracking and to run the ui
 >> mlflow ui --backend-store-uri sqlite:///mlflow.db
+
+
+mlflow.set_tracking_uri('sqlite:///mlflow.db')
+mlflow.set_tracking_uri('http://localhost:5000')
+mlflow.set_experiment('exp-2205') # this create: if not exists / set: if exists
+
+
+Models & Artifacts:
+
+How to to log model in mlflow?
+
+1. As a model: (recommended)
+    mlflow.xgboost.log_model(               # certain frameworks, xgb, lgb, tensorflow, keras etc
+        model_name, # model object name
+        artifact_path='models_mlflow')
+
+
+2. As an artifact:
+
+    Artifact is supposed to be a binary file saved on the working folder, so how can we log it to mlflow?
+
+    A. Using pickle we dump the binary file:
+    
+    with open('models/lin_reg.bin', 'wb') as f_out:
+    pickle.dump((dv, lr), f_out)
+
+    B. Then we log it to mlflow using log_artifact method:
+    mlflow.log_artifact(
+        local_path='model_file_name',    # from the working folder
+        artifact_path='foo'              # node name: on mlflow ui ---> under artifacts tab
+        ) 
+
+    BTW DictVectorizer is a function not a model and can be dump as binary file and also be logged to mlflow!
+
+    with open('models/preprocessor.b', 'wb') as f_out:
+        pickle.dump(dv, f_out)
+     
+    mlflow.log_artifact(local_path='models/preprocessor.b', artifact_path='preprocessor')
+    
+########################################################################################################
