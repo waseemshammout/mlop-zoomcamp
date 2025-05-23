@@ -33,7 +33,7 @@ mlflow.set_experiment('exp-2205') # this create: if not exists / set: if exists
 
 Models & Artifacts:
 
-How to to log model in mlflow?
+How to log model in mlflow?
 
 1. As a model: (recommended)
     mlflow.xgboost.log_model(               # certain frameworks, xgb, lgb, tensorflow, keras etc
@@ -62,5 +62,8 @@ How to to log model in mlflow?
         pickle.dump(dv, f_out)
      
     mlflow.log_artifact(local_path='models/preprocessor.b', artifact_path='preprocessor')
+
+Why is it recommended to log model? Because it makes it easy for access through the mlflow ui, by clicking on the model you can
+get full info there!
     
 ########################################################################################################
