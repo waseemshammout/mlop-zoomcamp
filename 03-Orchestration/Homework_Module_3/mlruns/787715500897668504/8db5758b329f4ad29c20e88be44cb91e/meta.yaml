@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/787715500897668504/8db5758b329f4ad29c20e88be44cb91e/artifacts
+end_time: 1748799160061
+entry_point_name: ''
+experiment_id: '787715500897668504'
+lifecycle_stage: active
+run_id: 8db5758b329f4ad29c20e88be44cb91e
+run_name: casual-conch-536
+run_uuid: 8db5758b329f4ad29c20e88be44cb91e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748799141610
+status: 4
+tags: []
+user_id: wsham

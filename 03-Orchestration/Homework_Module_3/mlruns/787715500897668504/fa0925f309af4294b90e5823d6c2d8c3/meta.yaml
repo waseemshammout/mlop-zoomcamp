@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/787715500897668504/fa0925f309af4294b90e5823d6c2d8c3/artifacts
+end_time: 1748794580197
+entry_point_name: ''
+experiment_id: '787715500897668504'
+lifecycle_stage: active
+run_id: fa0925f309af4294b90e5823d6c2d8c3
+run_name: shivering-shark-86
+run_uuid: fa0925f309af4294b90e5823d6c2d8c3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748794576130
+status: 4
+tags: []
+user_id: wsham

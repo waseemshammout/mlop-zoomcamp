@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/787715500897668504/bac6da63b3f44bd69b559deacb6e5fb7/artifacts
+end_time: 1748797928659
+entry_point_name: ''
+experiment_id: '787715500897668504'
+lifecycle_stage: active
+run_id: bac6da63b3f44bd69b559deacb6e5fb7
+run_name: ambitious-elk-233
+run_uuid: bac6da63b3f44bd69b559deacb6e5fb7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748797924416
+status: 4
+tags: []
+user_id: wsham

@@ -1,0 +1,3 @@
+- Splitting pipeline.py into three scripts placed in project_pipeline\custom
+- I didn't rely on loaders, transforms or exporter (rather used custom scripts)
+- mlflow (there are two mlruns folders) project root folder and in mage project folder

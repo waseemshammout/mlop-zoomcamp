@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/787715500897668504/4b3c281c53ce4ecdaf672a8212ee64b0/artifacts
+deleted_time: 1748789109660
+end_time: 1748788456000
+entry_point_name: ''
+experiment_id: '787715500897668504'
+lifecycle_stage: deleted
+run_id: 4b3c281c53ce4ecdaf672a8212ee64b0
+run_name: beautiful-shoat-279
+run_uuid: 4b3c281c53ce4ecdaf672a8212ee64b0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748788451973
+status: 4
+tags: []
+user_id: wsham
